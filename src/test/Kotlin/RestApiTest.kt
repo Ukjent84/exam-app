@@ -48,7 +48,7 @@ class RestApiTest : ApiTestBase() {
         given().param("genre", "Action")
                 .get()
                 .then()
-                .statusCode(400)
+                .statusCode(200)
                 .body("size()", CoreMatchers.equalTo(3))
     }
 
