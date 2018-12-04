@@ -54,16 +54,7 @@
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <version>${kotlin.version}</version>
-                <!--
-                    Kotlin has a major "limitation" that all classes are final by default.
-                    Someone call it a "feature", others (like me) call it a "design flaw".
-                    See more at: https://discuss.kotlinlang.org/t/classes-final-by-default/166/77
 
-                    Why is it a problem? for example, it does not play well with all major frameworks
-                    out there like JPA, Spring, mocking, etc, as they require to create proxy
-                    classes that extend the classes you write.
-                    So here we have to use special plugins to bypass this Kotlin "feature"...
-                -->
                 <configuration>
                     <jvmTarget>1.8</jvmTarget>
                     <compilerPlugins>
